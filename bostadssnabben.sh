@@ -32,7 +32,7 @@ while true
 do
 
     #Get search results through CURL and grep interesting lines
-    RESULT="$(curl -s https://bostad.stockholm.se/Lista/AllaAnnonser | python -m json.tool | grep Bostadssnabben)"
+    RESULT="$(curl -s https://bostad.stockholm.se/Lista/AllaAnnonser | jq | grep Bostadssnabben)"
 
     while read -r line 
     do
